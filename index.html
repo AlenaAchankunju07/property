@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>property</title>
+    <!-- link css -->
+     <link rel="stylesheet" href="./style.css">
+     <!-- link bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Merienda:wght@300..900&family=Mooli&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&family=Varela+Round&display=swap" rel="stylesheet">
+     <!--font awsome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- aos animate -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <!-- animate css -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+   />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">JustHome</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <div class="navbar-text">
+                <a href="tel:+6686858866">+66 685 8866</a>
+            </div>
+            <a href="#" class="btn btn-outline-secondary ms-2">Add Property</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section text-white text-center">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+        <div>
+            <h1>Office Space at Northwest</h1>
+            <p>5 Beds | 2 Baths | 180 sqft</p>
+            <p class="price">$250/month</p>
+            <a href="#" class="btn btn-warning">View Details</a>
+        </div>
+    </div>
+</section>
+
+<!-- Search Section -->
+<section class="search-section py-3">
+  <div class="container">
+      <div class="search-bar p-3 rounded-pill">
+          <div class="row align-items-center">
+              <div class="col-md-3">
+                  <input type="text" class="form-control rounded-pill text-light" placeholder="Enter Keyword">
+              </div>
+              <div class="col-md-3">
+                  <select class="form-control rounded-pill">
+                      <option selected>All Status</option>
+                      <option value="1">For Rent</option>
+                      <option value="2">For Sale</option>
+                  </select>
+              </div>
+              <div class="col-md-3">
+                  <select class="form-control rounded-pill">
+                      <option selected>All Type</option>
+                      <option value="1">Apartment</option>
+                      <option value="2">House</option>
+                  </select>
+              </div>
+              <div class="col-md-3 d-flex justify-content-between">
+                  <button class="btn btn-outline-light rounded-pill me-2 flex-grow-1">Filter</button>
+                  <button class="btn btn-warning rounded-pill flex-grow-1">Search</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Properties Section -->
+<section class="properties-section py-5">
+  <div class="container text-center">
+      <h2>Find Properties in These Cities</h2>
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="row justify-content-center">
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+              <div class="card shadow-sm">
+                  <img src="./images/ny.png" class="card-img-top" alt="New York">
+                  <div class="card-img-overlay d-flex flex-column justify-content-end">
+                      <h5 class="card-title text-white">New York</h5>
+                      <p class="card-text text-white">8 Properties</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+              <div class="card shadow-sm">
+                  <img src="./images/ch.png" class="card-img-top" alt="Chicago">
+                  <div class="card-img-overlay d-flex flex-column justify-content-end">
+                      <h5 class="card-title text-white">Chicago</h5>
+                      <p class="card-text text-white">2 Properties</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+              <div class="card shadow-sm">
+                  <img src="./images/la.png" class="card-img-top" alt="Los Angeles">
+                  <div class="card-img-overlay d-flex flex-column justify-content-end">
+                      <h5 class="card-title text-white">Los Angeles</h5>
+                      <p class="card-text text-white">1 Property</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+              <div class="card shadow-sm">
+                  <img src="./images/mi.png" class="card-img-top" alt="Miami">
+                  <div class="card-img-overlay d-flex flex-column justify-content-end">
+                      <h5 class="card-title text-white">Miami</h5>
+                      <p class="card-text text-white">2 Properties</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+              <div class="card shadow-sm">
+                  <img src="./images/fl.png" class="card-img-top" alt="Florida">
+                  <div class="card-img-overlay d-flex flex-column justify-content-end">
+                      <h5 class="card-title text-white">Florida</h5>
+                      <p class="card-text text-white">3 Properties</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Why Work With Us Section -->
+<section class="why-work-section py-5 bg-light">
+  <div class="container text-center">
+      <h2>Why You Should Work With Us</h2>
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="row">
+          <div class="col-md-4 mb-4">
+              <div class="feature-item">
+                  <i class="fas fa-home fa-2x mb-3"></i>
+                  <h5>Wide Range of Properties</h5>
+                  <p>We offer expert legal help for all related property items in Dubai.</p>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="feature-item">
+                  <i class="fas fa-dollar-sign fa-2x mb-3"></i>
+                  <h5>Buy or Rent Homes</h5>
+                  <p>We sell your home at the best market price and very quickly as well.</p>
+              </div>
+          </div>
+          <div class="col-md-4 mb-4">
+              <div class="feature-item">
+                  <i class="fas fa-shield-alt fa-2x mb-3"></i>
+                  <h5>Trusted by Thousands</h5>
+                  <p>We offer you free consultancy to get a loan for your new home.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Sign-In Banner Section -->
+<section class="sign-in-banner-section py-5 text-white text-center">
+  <div class="container d-flex justify-content-center align-items-center">
+      <div class="sign-in-banner p-4 rounded">
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+              <div class="text-center text-lg-start mb-3 mb-lg-0">
+                  <h3 class="mb-2">Sign in to streamline your search</h3>
+                  <p class="mb-0">Save properties, create alerts, and keep track of the enquiries you send to agents.</p>
+              </div>
+              <div>
+                  <a href="#" class="btn btn-warning btn-custom">Sign in or create an account →</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Featured Properties Section -->
+<section class="featured-properties-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="mb-3">Featured Properties</h2>
+      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="btn-group" role="group" aria-label="Property Filter">
+        <button type="button" class="btn btn-outline-secondary active">All Properties</button>
+        <button type="button" class="btn btn-outline-secondary">Villa</button>
+        <button type="button" class="btn btn-outline-secondary">Apartments</button>
+        <button type="button" class="btn btn-outline-secondary">Office</button>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Property Card 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-img-top position-relative overflow-hidden" style="height: 200px;">
+            <img src="./images/g1.png" class="img-fluid" alt="Luxury Family Home" style="object-fit: cover; width: 100%; height: 100%;">
+            <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sale</span>
+            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Featured</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Luxury Family Home</h5>
+            <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>1800-1819 79th St</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fas fa-bed"></i> 4 Beds</li>
+              <li class="list-inline-item"><i class="fas fa-bath"></i> 1 Bath</li>
+              <li class="list-inline-item"><i class="fas fa-car"></i> 1 Garage</li>
+              <li class="list-inline-item"><i class="fas fa-ruler-combined"></i> 400 sqft</li>
+            </ul>
+            <p class="text-primary h5">$395,000</p>
+          </div>
+        </div>
+      </div>
+      <!-- Property Card 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-img-top position-relative overflow-hidden" style="height: 200px;">
+            <img src="./images/g2.png" class="img-fluid" alt="Skyper Pool Apartment" style="object-fit: cover; width: 100%; height: 100%;">
+            <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sale</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Skyper Pool Apartment</h5>
+            <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>1020 Bloomingdale Ave</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fas fa-bed"></i> 4 Beds</li>
+              <li class="list-inline-item"><i class="fas fa-bath"></i> 2 Baths</li>
+              <li class="list-inline-item"><i class="fas fa-car"></i> 2 Garages</li>
+              <li class="list-inline-item"><i class="fas fa-ruler-combined"></i> 450 sqft</li>
+            </ul>
+            <p class="text-primary h5">$280,000</p>
+          </div>
+        </div>
+      </div>
+      <!-- Property Card 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-img-top position-relative overflow-hidden" style="height: 200px;">
+            <img src="./images/g3.png" class="img-fluid" alt="North Dillard Street" style="object-fit: cover; width: 100%; height: 100%;">
+            <span class="badge bg-info position-absolute top-0 start-0 m-2">For Rent</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">North Dillard Street</h5>
+            <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>4330 Bell Shoals Rd</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fas fa-bed"></i> 4 Beds</li>
+              <li class="list-inline-item"><i class="fas fa-bath"></i> 2 Baths</li>
+              <li class="list-inline-item"><i class="fas fa-car"></i> 2 Garages</li>
+              <li class="list-inline-item"><i class="fas fa-ruler-combined"></i> 400 sqft</li>
+            </ul>
+            <p class="text-primary h5">$250/month</p>
+          </div>
+        </div>
+      </div>
+      <!-- Property Card 4 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-img-top position-relative overflow-hidden" style="height: 200px;">
+            <img src="./images/g4.png" class="img-fluid" alt="Eaton Garth Penthouse" style="object-fit: cover; width: 100%; height: 100%;">
+            <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sale</span>
+            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Featured</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Eaton Garth Penthouse</h5>
+            <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>77722 18th Ave, Brooklyn</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fas fa-bed"></i> 4 Beds</li>
+              <li class="list-inline-item"><i class="fas fa-bath"></i> 2 Baths</li>
+              <li class="list-inline-item"><i class="fas fa-car"></i> 2 Garages</li>
+              <li class="list-inline-item"><i class="fas fa-ruler-combined"></i> 450 sqft</li>
+            </ul>
+            <p class="text-primary h5">$180,000</p>
+          </div>
+        </div>
+      </div>
+      <!-- Property Card 5 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-img-top position-relative overflow-hidden" style="height: 200px;">
+            <img src="./images/g6.png" class="img-fluid" alt="New Apartment Nice View" style="object-fit: cover; width: 100%; height: 100%;">
+            <span class="badge bg-info position-absolute top-0 start-0 m-2">For Rent</span>
+            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Featured</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">New Apartment Nice View</h5>
+            <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>42 Avenue Q, Brooklyn</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fas fa-bed"></i> 4 Beds</li>
+              <li class="list-inline-item"><i class="fas fa-bath"></i> 2 Baths</li>
+              <li class="list-inline-item"><i class="fas fa-car"></i> 1 Garage</li>
+              <li class="list-inline-item"><i class="fas fa-ruler-combined"></i> 460 sqft</li>
+            </ul>
+            <p class="text-primary h5">$850/month</p>
+          </div>
+        </div>
+      </div>
+      <!-- Property Card 6 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-img-top position-relative overflow-hidden" style="height: 200px;">
+            <img src="./images/g7.png" class="img-fluid" alt="Diamond Manor Apartment">
+            <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sale</span>
+            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Featured</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Diamond Manor Apartment</h5>
+            <p class="card-text"><i class="fas fa-map-marker-alt me-2"></i>7802 20th Ave, Brooklyn</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="fas fa-bed"></i> 4 Beds</li>
+              <li class="list-inline-item"><i class="fas fa-bath"></i> 2 Bath</li>
+              </ul>
+              <p class="text-primary h5">$850/month</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+<!-- discover Section -->
+<section class="discover-section  text-center text-white">
+  <div class="container">
+      <div class="row justify-content-center align-items-center">
+          <div class="col-md-8">
+              <h1 class="disc-title">Discover a place you'll love to live</h1>
+              <p class="disc-subtitle">Pellentesque egestas elementum egeta facibus sem. Vali nunc egestas ut ridiculus id neque sit amet fermentum massa pretium. Nam mauris nulla ac dictum et mauris nec</p>
+              <a href="#" class="btn btn-warning">View Properties</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="stats-section py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 d-flex align-items-center">
+              <div>
+                  <h2 class="section-title">We Use Real Estate to Show Our Appreciation of The World</h2>
+                  <p class="section-subtitle">Pellentesque egestas elementum egeta facibus sem. Vali nunc egestas ut ridiculus id neque sit amet fermentum massa pretium. Nam mauris nulla ac dictum et mauris nec.</p>
+                  <div class="stats d-flex justify-content-between mt-4">
+                      <div class="stat-item">
+                          <h3>$18M</h3>
+                          <p>Owned From Properties Transactions</p>
+                      </div>
+                      <div class="stat-item">
+                          <h3>15K+</h3>
+                          <p>Properties For Sell</p>
+                      </div>
+                      <div class="stat-item">
+                          <h3>26K+</h3>
+                          <p>Properties For Buy</p>
+                      </div>
+                      <div class="stat-item">
+                          <h3>890</h3>
+                          <p>Daily Completed Transactions</p>
+                      </div>
+                  </div>
+                  <a href="#" class="btn btn-warning mt-4">Learn More</a>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <img src="./images/gridimg.png" alt="Property Image" class="img-fluid">
+          </div>
+      </div>
+  </div>
+</section>
+<section class="testimonial-container">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 testimonial-info">
+              <h2 class="testimonial-title">What our customers are saying us?</h2>
+              <div class="testimonial-stats">
+                  <div class="stat-item">
+                      <h3 class="stat-value">10m+</h3>
+                      <p class="stat-label">Happy People</p>
+                  </div>
+                  <div class="stat-item">
+                      <h3 class="stat-value">4.88</h3>
+                      <p class="stat-label">Overall Rating</p>
+                      <div class="rating-stars">
+                          ★★★★★
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 testimonial-quote">
+              <div class="quote-item">
+                  <img src="./images/girl.png" alt="User" class="user-img">
+                  <p class="user-name">Cameron Williamson</p>
+                  <p class="user-role">Designer</p>
+                  <p class="quote-text">"Searches for multipurpose, property comparisons, and the loan estimate. Works great. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."</p>
+                  <div class="quote-navigation">
+                      <button class="nav-button"></button>
+                      <button class="nav-button"></button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="trusted-companies">
+  <div class="container">
+      <p class="trusted-title">Thousands of world's leading companies trust Us</p>
+      <div class="companies-logos">
+          <img src="./images/amazon.png" alt="Company 1" class="company-logo">
+          <img src="./images/amd.png" alt="Company 2" class="company-logo">
+          <img src="./images/cisco.png" alt="Company 3" class="company-logo">
+          <img src="./images/fropcam.png" alt="Company 4" class="company-logo">
+          <img src="./images/logitech.png" alt="Company 5" class="company-logo">
+          <img src="./images/spotify.png" alt="Company 6" class="company-logo">
+      </div>
+  </div>
+</section>
+
+<section class="recent-articles">
+  <div class="container">
+      <h2 class="section-title">Recent Articles & News</h2>
+      <p class="section-subtitle">Learn about the latest trends, tips, and updates.</p>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="article-card">
+                  <img src="./images/c1.png" alt="Article 1" class="article-img">
+                  <div class="article-content">
+                      <p class="article-category">Apartment • March 10, 2024</p>
+                      <h4 class="article-title">Housing Markets That Changed the Most This Week</h4>
+                      <a href="#" class="read-more">Read More →</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="article-card">
+                  <img src="./images/c2.png" alt="Article 2" class="article-img">
+                  <div class="article-content">
+                      <p class="article-category">Apartment • March 12, 2024</p>
+                      <h4 class="article-title">Red Unveils the Best Canadian Cities for Biking</h4>
+                      <a href="#" class="read-more">Read More →</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="article-card">
+                  <img src="./images/c3.png" alt="Article 3" class="article-img">
+                  <div class="article-content">
+                      <p class="article-category">Office • March 16, 2024</p>
+                      <h4 class="article-title">10 Walkable Cities Where You Can Live Affordably</h4>
+                      <a href="#" class="read-more">Read More →</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="download-app">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <div class="app-content">
+                  <h3 class="app-title">Download the App</h3>
+                  <p class="app-description">Take classes on the go with the JustHome app. Stream or download to watch on the plane, the subway, or wherever you learn best.</p>
+                  <div class="app-buttons">
+                      <a href="#" class="btn btn-primary">Download on the Apple Store</a>
+                      <a href="#" class="btn btn-secondary">Get it on Google Play</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <img src="./images/gridimg2.png" alt="Download App" class="app-img">
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container">
+      <div class="newsletter-content text-center">
+          <h4 class="newsletter-title">Stay Up to Date</h4>
+          <p class="newsletter-description">Subscribe to our newsletter to receive our weekly feed.</p>
+          <form class="newsletter-form">
+              <input type="email" placeholder="Your email" class="newsletter-input">
+              <button type="submit" class="btn btn-primary">Send →</button>
+          </form>
+      </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container text-center">
+      <p class="footer-logo">JustHome</p>
+      <p class="footer-text">Copyright © 2024. JustHome.</p>
+      <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+  </div>
+</footer>
+
+
+
+
+    <!-- <div class="home">
+        <img class="homeimage img-fluid" src="./images/bg.png" alt="">
+    
+        <div class="nav">
+          <nav class="navbar navbar-expand-lg bg-transparent text-body">
+            <div class="container-fluid">
+    
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-2">
+                  <a class="navbar-brand ms-5" href="#">
+                    <img class="logo " src="./images/logow.png" alt="">
+                  </a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mt-2 text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Home
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mt-2 text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Listing
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mt-2 text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       Members
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mt-2 text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Blog
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mt-2 text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link active mt-2 text-light" aria-current="page" href="#">Contact</a>
+                  </li>
+    
+    
+    
+                </ul>
+    
+              </div>
+            </div>
+          </nav>
+        </div>
+        <hr>
+        <div class="homecontent">
+          <div class="centered-div ">
+            <h1 >Travel </h1>
+            <span id="caption"> for enough</span>
+            <h1>you meet</h1>
+            <span id="caption">yourself</span>
+    
+          </div>
+          <button type="button" class="btn btn-success enquiry">Enquiry</button>
+    
+          
+        </div>
+    
+    
+    
+    
+      </div> -->
+</body>
+<!-- bootstap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <!-- aos -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</html>
